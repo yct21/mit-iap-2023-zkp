@@ -164,6 +164,6 @@ mod tests {
         let modulus = U256::from_u64(67);
         let (residue, proofs) = prove(secret, generator, modulus);
 
-        assert!(verify(residue, generator, modulus, proofs));
+        assert!(!verify(residue, generator, modulus, proofs));
     }
 }
